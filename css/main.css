@@ -1,0 +1,79 @@
+* {
+	 /* 盒模型宽高包含内边距和边框 */
+ 	box-sizing: border-box;
+ }
+body{
+    background-color: #454545; 
+    line-height: 1.7;
+}
+a{
+	/* 消除a标签样式 */
+	text-decoration: none;
+} 
+a, body{
+    color: #eeeeee;
+}
+/* 侧边栏 */
+.side-bar{ 
+    float: left; /* float布局，左浮动 */
+    width: 20%;
+    position: fixed; /* 绝对定位，相对于浏览器窗口进行定位 */
+}
+/* 侧边栏中的所有子节点 */
+ .side-bar > *{
+	/* 上下边距10px 左右边距20px */
+	padding: 10px 20px;
+}
+/* 侧边栏中的导航和标签 */
+.side-bar .nav a,
+.side-bar .tag a 
+{
+	display: block; /* 块状显示，占据一行 */
+	padding: 5px; /* 四边距 5px */
+	color: #999999;
+ 	transition: color 200ms; /* 颜色变化用时 0.2s */
+}
+/* a标签的鼠标悬停效果 */
+.side-bar .nav a:hover,
+.side-bar .tag a:hover { 
+	color: #eeeeee;
+} 
+.side-bar .nav a {
+	font-weight: 700;
+}
+.main{ 
+	float: right;
+	width: 80%;
+	color: #454545 /* main 中字体颜色 */
+} 
+.header .logo{ 
+	line-height: 1; /* 上下居中 */
+	border: 5px solid #eeeeee; /* 边框属性 */
+	padding: 10px 20px;
+	font-size: 30px; 
+	display: inline-block; 
+	margin-bottom: 10px; 
+} 
+.artical-list {
+	margin-right: 30%; 
+	background-color: #fff;
+	padding: 20px 30px;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2) /* 阴影效果 */
+}
+.artical-list .item {
+	margin-bottom: 20px;
+} 
+.artical-list .item > * { 
+	margin: 10px 0; 
+} 
+.artical-list .item .title {
+	font-size: 25px; 
+	font-weight: 700;
+} 
+.artical-list .item .status {
+	font-size: 15px; color: #777777; 
+}
+/* 非移动端模式下隐藏选择框 */
+#menu-checkbox, #menu-toggle {
+	display: none; 
+}
