@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link media="(max-width:500px)" rel="stylesheet" href="css/mobile.css">
+    <title>BLog</title>
+</head>
+<body>
+<div class="side-bar">
+    <label id="menu-toggle" for="menu-checkbox">目录</label>
+    <input id="menu-checkbox" type="checkbox">
+    <div class="header">
+        <a href="index.html" class="logo">Talon</a>
+        <div class="intro">心中有党，代码理想。心中有党，代码理想。心中有党，代码理想。心中有党，代码理想。</div>
+    </div>
+    <div class="nav">
+        <a href="#" class="item">关于我</a>
+        <a href="#" class="item">联系我</a>
+        <a href="#" class="item">友情链接</a>
+    </div>
+    <div class="tag">
+        <a href="#" class="item"># 前端</a>
+        <a href="#" class="item"># JavaScript</a>
+        <a href="#" class="item"># Vue</a>
+        <a href="#" class="item"># HTML5</a>
+    </div>
+</div>
+<div class="main">
+    <div class="artical-list" id="article-list">
+
+            <% for (var i = 0; i < obj.length; i ++) { %>
+            <div class="item">
+                <div class="title"><%=obj[i]['blog_title']%></div>
+                <div class="status">发布于 + </div>
+            </div>
+            <% }
+            %>
+    </div>
+</div>
+<!--<script src="js/index.js"></script>-->
+</body>
+</html>
