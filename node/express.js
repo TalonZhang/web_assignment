@@ -16,15 +16,26 @@ MongoClient.connect(url, {useNewUrlParser: true}, function (err, db) {
     var dbo = db.db("csdn")
     dbo.collection("blog_article").find({}).toArray(function (err, result) {
         if (err) throw err
-        //console.log(result[3]['blog_content'])
+        // for (var i = 0; i < result.length; i++) {
+        //     if (result[i]['blog_title'].charAt(0)!='【')
+        //         result[i]['blog_title']=' '+result[i]['blog_title'];
+        // }
+        // console.log(typeof (result[3]['blog_content']))
         app.get('/', function (req, res) {
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Headers", "X-Requested-With");
-            //res.send(result)
+            var data={'obj':result};
+            res.render('list.html',data);
+        })
+        app.get('/', function (req, res) {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "X-Requested-With");
             var data={'obj':result};
             res.render('list.html',data);
         })
     })
 })
 
-app.listen(8081)
+app.listen(8081,function () {
+    console.log("127.0.0.1:8081")
+})

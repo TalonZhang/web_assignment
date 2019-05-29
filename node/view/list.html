@@ -31,16 +31,21 @@
 </div>
 <div class="main">
     <div class="artical-list" id="article-list">
-
-            <% for (var i = 0; i < obj.length; i ++) { %>
-            <div class="item">
+        <% for (var i = 0; i < obj.length; i ++) { %>
+        <a href="">
+            <div class="item2 item">
                 <div class="title"><%=obj[i]['blog_title']%></div>
-                <div class="status">发布于 + </div>
+                <div class="status">
+                    <span><img src="img/time.png" class="icon">&nbsp;<%=obj[i]['blog_time']%></span>
+                    &nbsp;
+                    <span><img src="img/user.png" class="icon">&nbsp;Talon</span>
+                </div>
             </div>
-            <% }
-            %>
+        </a>
+        <% }
+        %>
     </div>
 </div>
-<!--<script src="js/index.js"></script>-->
+<script src="js/index.js"></script>
 </body>
 </html>
