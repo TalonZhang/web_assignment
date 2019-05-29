@@ -7,6 +7,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link media="(max-width:700px)" rel="stylesheet" href="css/mobile.css">
+    <style>
+        a{text-decoration: none;color: #eeeeee}
+        li{list-style-type:none;margin-top: 10px}
+    </style>
     <title>BLog</title>
 </head>
 <body>
@@ -29,23 +33,16 @@
         <a href="#" class="item"># HTML5</a>
     </div>
 </div>
-<div class="main">
-    <div class="article-list" id="article-list">
-        <% for (var i = 0; i < obj.length; i ++) { %>
-        <% var url = 'article?id='+obj[i]['_id'] %>
-        <a href="<%= url %>">
-            <div class="item2 item">
-                <div class="title"><%=obj[i]['blog_title']%></div>
-                <div class="status">
-                    <span><img src="img/time.png" class="icon">&nbsp;<%=obj[i]['blog_time']%></span>
-                    &nbsp;
-                    <span><img src="img/user.png" class="icon">&nbsp;Talon</span>
-                </div>
-            </div>
-        </a>
-        <% }
-        %>
-    </div>
+<div class="main" style="color: white">
+    <ul style="margin-top: 50px">
+        <li>GitHub:&nbsp;<a href="https://github.com/TalonZhang">github.com/TalonZhang</a></li>
+        <li>CSDN:&nbsp;<a href="https://blog.csdn.net/TalonZhang">blog.csdn.net/TalonZhang</a></li>
+        <br>
+        <li>IMUDGES GIT:&nbsp;<a href="http://git.imudges.com">git.imudges.com/</a></li>
+        <li>IMUDGES 云服务:&nbsp;<a href="https://pan.imudges.com">pan.imudges.com</a></li>
+        <li>IMUDGES OJ:&nbsp;<a href="http://acm2.imudges.com">acm2.imudges.com</a></li>
+        <li>IMUDGES 百度百科:&nbsp;<a href="https://baike.baidu.com/item/%E5%86%85%E8%92%99%E5%8F%A4%E5%A4%A7%E5%AD%A6%E7%B2%BE%E8%8B%B1%E5%AD%A6%E7%94%9F%E5%BC%80%E5%8F%91%E8%80%85%E8%81%94%E7%9B%9F/8496137?fr=aladdin">内蒙古大学精英学生开发者联盟</a></li>
+    </ul>
 </div>
 <script src="js/index.js"></script>
 </body>

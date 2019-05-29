@@ -54,6 +54,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, function (err, db) {
                 blog_content: result[0]['blog_content']
             })
         })
+
     })
 })
 
