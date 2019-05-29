@@ -43,8 +43,16 @@ MongoClient.connect(url, {useNewUrlParser: true}, function (err, db) {
                     break
                 }
             }
+        })
+        app.get('/test', function (req, res) {
 
-
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "X-Requested-With");
+            res.render('test',{
+                blog_title: result[0]['blog_title'],
+                blog_time: result[0]['blog_time'],
+                blog_content: result[0]['blog_content']
+            })
         })
     })
 })
