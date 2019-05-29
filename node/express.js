@@ -27,11 +27,24 @@ MongoClient.connect(url, {useNewUrlParser: true}, function (err, db) {
             var data={'obj':result};
             res.render('list.html',data);
         })
-        app.get('/', function (req, res) {
+        app.get('/article', function (req, res) {
+
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Headers", "X-Requested-With");
-            var data={'obj':result};
-            res.render('list.html',data);
+
+            for (var i = 0; i < result.length; i++) {
+                if (result[i]['_id']==req.query.id) {
+                    res.render('article',{
+                        blog_title: result[i]['blog_title'],
+                        blog_time: result[i]['blog_time'],
+                        blog_content: result[i]['blog_content']
+                    })
+
+                    break
+                }
+            }
+
+
         })
     })
 })

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/article.css">
     <link media="(max-width:700px)" rel="stylesheet" href="css/mobile.css">
     <title>BLog</title>
 </head>
@@ -30,21 +31,18 @@
     </div>
 </div>
 <div class="main">
-    <div class="article-list" id="article-list">
-        <% for (var i = 0; i < obj.length; i ++) { %>
-        <% var url = 'article?id='+obj[i]['_id'] %>
-        <a href="<%= url %>">
-            <div class="item2 item">
-                <div class="title"><%=obj[i]['blog_title']%></div>
-                <div class="status">
-                    <span><img src="img/time.png" class="icon">&nbsp;<%=obj[i]['blog_time']%></span>
-                    &nbsp;
-                    <span><img src="img/user.png" class="icon">&nbsp;Talon</span>
-                </div>
-            </div>
-        </a>
-        <% }
-        %>
+
+    <div class="article-list blog_article">
+        <div class="blog_title"><%= blog_title %></div>
+        <div class="blog_status">
+            <span><img src="img/time.png" class="icon"><%= blog_time %></span>
+            &nbsp;
+            <span><img src="img/user.png" class="icon">&nbsp;Talon</span>
+        </div>
+        <hr>
+        <div class="blog_content">
+            <%- blog_content %>
+        </div>
     </div>
 </div>
 <script src="js/index.js"></script>
