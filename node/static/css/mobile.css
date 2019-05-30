@@ -36,7 +36,7 @@
 }
 
 .article-list .item .status {
-    font-size: 10px;
+    font-size: 14px;
     margin: 20px 0 0 30px;
 }
 
@@ -76,4 +76,8 @@
     font-size: 15px; color: #777777;
     margin: 30px 0 0 10px;
     padding-bottom: 10px;
+}
+.icon {
+    height: 14px;
+    width: 14px;
 }
