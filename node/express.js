@@ -16,11 +16,6 @@ MongoClient.connect(url, {useNewUrlParser: true}, function (err, db) {
     var dbo = db.db("csdn")
     dbo.collection("blog_article").find({}).toArray(function (err, result) {
         if (err) throw err
-        // for (var i = 0; i < result.length; i++) {
-        //     if (result[i]['blog_title'].charAt(0)!='【')
-        //         result[i]['blog_title']=' '+result[i]['blog_title'];
-        // }
-        // console.log(typeof (result[3]['blog_content']))
         app.get('/', function (req, res) {
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Headers", "X-Requested-With");
