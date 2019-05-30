@@ -41,7 +41,10 @@ padding: 10px 20px;
 	float: right;
 	width: 85%; 
 	color: #454545 
-} 
+}
+.intro {
+	color: #eeeeee;
+}
 .header .logo{
 	color: #eeeeee;
 	line-height: 1;
