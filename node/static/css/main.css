@@ -20,8 +20,9 @@ body{
     position: fixed; 
 } 
  .side-bar > *{ 
-padding: 10px 20px; 
-} 
+padding: 15px 20px;
+}
+
 .side-bar .nav a,
 .side-bar .tag a 
 { 
@@ -44,6 +45,10 @@ padding: 10px 20px;
 }
 .intro {
 	color: #eeeeee;
+	margin-top: 30px;
+}
+.header {
+	margin-top: 30px;
 }
 .header .logo{
 	color: #eeeeee;
@@ -53,7 +58,7 @@ padding: 10px 20px;
 	font-size: 30px; 
 	display: inline-block; 
 	margin-bottom: 10px; 
-} 
+}
 .article-list {
 	margin-right: 30%; 
 	background-color: #eeeeee;
